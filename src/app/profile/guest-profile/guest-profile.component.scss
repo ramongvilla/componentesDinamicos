@@ -1,0 +1,52 @@
+@import '~src/assets/styles/mixins.scss';
+
+.card {
+  display: flex;
+  @include card();
+
+  &__title {
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__subtitle {
+    margin: 0 0 0.5rem 0;
+  }
+
+  &__toolbar button {
+    @include button(#145092);
+  }
+
+  &__avatar {
+    height: 80px;
+    width: $avatar-width;
+    border: 2px solid #bbb;
+    background: #666;
+    position: relative;
+    overflow: hidden;
+
+    &__head {
+      position: absolute;
+      border-radius: 50%;
+      background: #bbb;
+      width: 35px;
+      height: 35px;
+      top: 15px;
+      left: 22px;
+    }
+
+    &__body {
+      position: absolute;
+      border-radius: 50%;
+      background: #bbb;
+      width: 70px;
+      height: 50px;
+      top: 55px;
+      left: 5px;
+    }
+  }
+}
+
+.container {
+  width: $card-width - $avatar-width - $container-margin;
+  margin: 0 $container-margin;
+}
